@@ -4,6 +4,7 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  workflow_call:
 
 permissions:
   contents: read
@@ -44,4 +45,4 @@ jobs:
           python -m venv /tmp/rf-install
           /tmp/rf-install/bin/python -m pip install dist/*.whl
           cd /tmp
-          /tmp/rf-install/bin/python -c "from rf import Task, Queue, BaseProcess, TaskFlow"
+          /tmp/rf-install/bin/python -c "from importlib.metadata import version; from rf import Task, Queue, BaseProcess, TaskFlow; print(version('redis-flow'))"

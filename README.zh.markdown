@@ -13,7 +13,22 @@ Redis 保留任务，直到工作线程确认任务完成。
 使用 `flow.submit(tasks)` 可在继续执行前等待 Redis 确认。
 详细说明见[可靠性与限制（英文）](docs/reliability.markdown)。
 
-## 快速开始
+## 安装
+
+PyPI 发行名为 `redis-flow`，Python 导入名仍为 `rf`：
+
+```sh
+python -m pip install redis-flow
+```
+
+```python
+from rf import Task, TaskFlow
+```
+
+首次 PyPI 发布正在准备中。发布完成前，请按下文从源码安装。
+PyPI 上另一个名为 `rf` 的项目使用相同导入名，不要在同一环境中同时安装两者。
+
+## 从源码快速开始
 
 需要 Python 3.10 或更新版本，以及一个 Redis 单机服务。
 在仓库根目录执行以下命令：
@@ -127,4 +142,5 @@ Redis 集成测试、打包检查和发布要求见[贡献指南（英文）](CO
 ## 许可证与发布状态
 
 本项目采用 [MIT 许可证](LICENSE)。
-发布要求完成前，项目不会自动发布软件包。
+PyPI 发布通过手动启动的工作流执行，使用 Trusted Publishing 授权。
+配置和发布步骤见[发布指南（英文）](docs/publishing.markdown)。

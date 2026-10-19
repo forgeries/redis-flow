@@ -13,7 +13,22 @@ Initial tasks can be lost if the process stops before the buffer writes them to 
 Use `flow.submit(tasks)` to wait for Redis confirmation before continuing.
 See [Reliability and limits](docs/reliability.markdown) for details.
 
-## Quick start
+## Installation
+
+The PyPI distribution name is `redis-flow`. Python imports remain `rf`:
+
+```sh
+python -m pip install redis-flow
+```
+
+```python
+from rf import Task, TaskFlow
+```
+
+The first PyPI release is being prepared. Until it is available, install from source as shown below.
+The unrelated PyPI project named `rf` uses the same import name. Do not install both in one environment.
+
+## Quick start from source
 
 You need Python 3.10 or later and a standalone Redis server.
 Run these commands from the repository root:
@@ -128,4 +143,5 @@ See the [Changelog](CHANGELOG.markdown) for changes and API migration notes.
 ## License and release status
 
 This project is licensed under the [MIT License](LICENSE).
-Package publication is disabled until the release requirements are complete.
+PyPI publication uses a manually started workflow with Trusted Publishing.
+See [Publishing](docs/publishing.markdown) for setup and release steps.

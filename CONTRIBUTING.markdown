@@ -99,13 +99,15 @@ After you push a CI change, check the result of the remote run.
 
 ## Prepare a release
 
-The project does not upload packages automatically.
+Pushes and pull requests do not upload packages.
+The manual [publishing workflow](.github/workflows/publish.yml) uses PyPI Trusted Publishing.
+Follow [Publishing](docs/publishing.markdown) to configure and run it.
 Before a release:
 
 - Review third-party attribution and licenses. Preserve required notices.
 - Replace any example credentials that were used with real services. Check Git history for exposed credentials.
-- Update the version and changelog. Run the full CI suite on the release tag.
-- Select the package destination and credential storage method. Configure a protected release workflow.
+- Update the version and changelog. The publishing workflow runs the full CI suite on its selected commit.
+- Check the PyPI Trusted Publisher and the GitHub `pypi` environment.
 
 The project is at version 0.x. Record public API changes in the changelog.
 Do not commit real service credentials. Editing a file does not remove its earlier contents from Git history.

@@ -47,6 +47,9 @@ Follow redis-py argument formats. For example, use `client.zadd(key, {member: sc
 
 ### Development and documentation
 
+- Use the PyPI distribution name `redis-flow`. Keep the `rf` import package for compatibility.
+- Add manual PyPI Trusted Publishing after the full CI matrix and package checks.
+- Resolve README links to GitHub when building the PyPI description.
 - Require Python 3.10 or later. Add automated tests, package checks, and CI workflows.
 - Use Ruff for formatting and import order. Run these checks in CI.
 - Remove old experiment scripts. Disable package uploads on main-branch pushes.
