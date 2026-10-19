@@ -25,7 +25,7 @@ python -m pip install redis-flow
 from rf import Task, TaskFlow
 ```
 
-The first PyPI release is being prepared. Until it is available, install from source as shown below.
+For local development, install from source as shown below.
 The unrelated PyPI project named `rf` uses the same import name. Do not install both in one environment.
 
 ## Quick start from source

@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.3.6 - 2026-10-19
 
 ### Task reliability
 
@@ -60,4 +60,4 @@ Follow redis-py argument formats. For example, use `client.zadd(key, {member: sc
 
 - Adopt the MIT License. Include the license text in source and wheel distributions.
 
-The first release under the new process remains pending.
+This is the first public PyPI release under the `redis-flow` distribution name.
