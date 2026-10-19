@@ -1,0 +1,4 @@
+redis>=5.0.3
+loguru>=0.6.0
+better_exceptions>=0.3.3
+schedule>=1.2.1

@@ -1,0 +1,6 @@
+include README.markdown README.zh.markdown CONTRIBUTING.markdown CHANGELOG.markdown requirements.txt pyproject.toml
+include LICENSE
+recursive-include docs *.markdown
+recursive-include tests *.py
+recursive-include examples *.py
+recursive-include examples *.markdown

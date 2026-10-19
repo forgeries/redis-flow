@@ -1,0 +1,13 @@
+main: 
+  push: 
+    - docker:
+        image: python:3.11
+      stages:
+        - name: Run unit tests and check packages
+          script:
+            - python -m pip install -e '.[dev]'
+            - python -m ruff check .
+            - python -m ruff format --check .
+            - python -m pytest tests/unit -q
+            - python -m build
+            - python -m twine check --strict dist/*
